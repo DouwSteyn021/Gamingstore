@@ -5,7 +5,16 @@ import sys
 
 
 def main():
-    """Run administrative tasks."""
+    """Run administrative tasks.
+
+    This function is the entry point for running administrative tasks in Django.
+    It sets up the Django project's environment and executes the management commands.
+
+    Raises:
+        ImportError: If Django is not installed or not available on PYTHONPATH.
+            Make sure Django is installed and a virtual environment is activated.
+
+    """
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gamingstore.settings')
     try:
         from django.core.management import execute_from_command_line
